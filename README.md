@@ -1,4 +1,6 @@
-# Advanced Sample Hardhat Project
+# this is a project of me Tony Chen and the journey i learned to code Solidity smart contract, hardhat, JS, and it can be deploy on local node or testnet like rinkeby
+
+Advanced Sample Hardhat Project
 
 This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
 
