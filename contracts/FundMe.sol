@@ -6,8 +6,8 @@ import "./PriceConverter.sol";
 error FundMe__NotOwner();
 
 /**@title A sample Funding Contract
- * @author Patrick Collins
- * @notice This contract is for creating a sample funding contract
+ * @author Tony Chen
+ * @notice This contract is for tony myself to learn to code solidity
  * @dev This implements price feeds as our library
  */
 contract FundMe {
