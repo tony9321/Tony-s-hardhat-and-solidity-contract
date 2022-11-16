@@ -1,4 +1,4 @@
-# this is a project of me Tony Chen and the journey i learned to code Solidity smart contract, hardhat, JS, and it can be deploy on local node or testnet like rinkeby
+# this is a project I coded and the journey i learned to code Solidity smart contract, hardhat, JS, and it can be deploy on local node or testnet like rinkeby
 
 Advanced Sample Hardhat Project
 
