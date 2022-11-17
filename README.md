@@ -19,14 +19,14 @@ You might need to install it with npm
 If you're familiar with npx and npm instead of yarn, you can use npx for execution and npm for installing dependencies.
 
 Run:
-'''
+```
 yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
-'''
+```
 
 Then:
-'''
+```
 yarn test
-'''
+```
 
 Try running some of the following tasks:
 
