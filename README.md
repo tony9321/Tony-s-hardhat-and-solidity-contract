@@ -6,6 +6,28 @@ This project demonstrates an advanced Hardhat use case, integrating other tools 
 
 The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
 
+Requirements:
+git
+You'll know you did it right if you can run git --version and you see a response like git version x.x.x
+Nodejs
+You'll know you've installed nodejs right if you can run:
+node --versionand get an output like: vx.x.x
+Yarn instead of npm
+You'll know you've installed yarn right if you can run:
+yarn --version And get an output like: x.x.x
+You might need to install it with npm
+If you're familiar with npx and npm instead of yarn, you can use npx for execution and npm for installing dependencies.
+
+Run:
+'''
+yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+'''
+
+Then:
+'''
+yarn test
+'''
+
 Try running some of the following tasks:
 
 ```shell
