@@ -64,3 +64,85 @@ Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_
 ```shell
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
+
+Usage
+If you run npx hardhat --help you'll get an output of all the tasks you can run.
+
+Deploying Contracts
+```
+npm run deploy
+```
+This will deploy your contracts to a local network. Additionally, if on a local network, it will deploy mock Chainlink contracts for you to interact with. If you'd like to interact with your deployed contracts, skip down to Interacting with Deployed Contracts.
+
+Run a Local Network
+One of the best ways to test and interact with smart contracts is with a local network. To run a local network with all your contracts in it, run the following:
+```
+npx hardhat node
+```
+You'll get a local blockchain, private keys, contracts deployed (from the deployment folder scripts), and an endpoint to potentially add to an EVM wallet.
+
+Using a Testnet or Live Network (like Mainnet or Polygon)
+In your hardhat.config.js you'll see section like:
+```
+module.exports = {
+  defaultNetwork: "hardhat",
+  networks: {
+ ```
+This section of the file is where you define which networks you want to interact with. You can read more about that whole file in the hardhat documentation.
+
+To interact with a live or test network, you'll need:
+
+An rpc URL
+A Private Key
+ETH & LINK token (either testnet or real)
+Let's look at an example of setting these up using the Goerli testnet.
+
+Test
+Tests are located in the test directory, and are split between unit tests and staging/testnet tests. Unit tests should only be run on local environments, and staging tests should only run on live environments.
+
+To run unit tests:
+```
+npx hardhat test
+```
+or
+```
+npm run test
+```
+or
+```
+yarn test
+```
+
+Performance optimizations
+Since all tests are written in a way to be independent from each other, you can save time by running them in parallel. Make sure that AUTO_FUND=false inside .env file. There are some limitations with parallel testing, read more about them here
+
+To run tests in parallel:
+```
+npx hardhat test --parallel
+```
+or
+```
+npm run test --parallel
+```
+Interacting with Deployed Contracts
+After deploying your contracts, the deployment output will give you the contract addresses as they are deployed. You can then use these contract addresses in conjunction with Hardhat tasks to perform operations on each contract.
+
+Chainlink Price Feeds
+The Price Feeds consumer contract has one task, to read the latest price of a specified price feed contract
+```
+npx hardhat read-price-feed --contract insert-contract-address-here --network network
+```
+Request & Receive Data
+The APIConsumer contract has two tasks, one to request external data based on a set of parameters, and one to check to see what the result of the data request is. This contract needs to be funded with link first:
+```
+npx hardhat fund-link --contract insert-contract-address-here --network network
+```
+Once it's funded, you can request external data by passing in a number of parameters to the request-data task. The contract parameter is mandatory, the rest are optional
+```
+npx hardhat request-data --contract insert-contract-address-here --network network
+```
+Once you have successfully made a request for external data, you can see the result via the read-data task
+```
+npx hardhat read-data --contract insert-contract-address-here --network network
+```
+[key]:https://hardhat.org/getting-started/
