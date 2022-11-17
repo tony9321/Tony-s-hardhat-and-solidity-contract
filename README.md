@@ -145,4 +145,4 @@ Once you have successfully made a request for external data, you can see the res
 ```
 npx hardhat read-data --contract insert-contract-address-here --network network
 ```
-[key]:https://hardhat.org/getting-started/
+[HardHat Documentation (https://hardhat.org/getting-started/)]:
